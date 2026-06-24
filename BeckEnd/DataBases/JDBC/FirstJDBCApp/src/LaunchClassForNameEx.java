@@ -1,0 +1,21 @@
+import java.sql.DriverManager;
+
+public class LaunchClassForNameEx {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		// TODO Auto-generated method stub
+		Class.forName("Demo");
+
+	}
+
+}
+
+class Demo {
+	static {
+		System.out.println("Static Block ");
+
+	}
+	{
+		System.out.println("Instance block ==? Non static ");
+	}
+}

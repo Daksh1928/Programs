@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\devan\OneDrive\Desktop\TeluskoRevison\DataBases\JDBC\.metadata\.plugins\org.eclipse.jdt.core
+2627657950.index
+1865797976.index
+2856924912.index
+858186177.index

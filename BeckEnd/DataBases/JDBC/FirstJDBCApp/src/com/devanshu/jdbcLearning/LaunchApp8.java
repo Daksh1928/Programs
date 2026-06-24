@@ -1,0 +1,39 @@
+package com.devanshu.jdbcLearning;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class LaunchApp8 {
+
+    public static void main(String[] args) {
+        Connection connect = null;
+        PreparedStatement pstmnt = null;
+
+        try {
+            connect = JdbcUtil.getConnection();
+            String sql = "UPDATE studentinfo SET sage=? WHERE id=?";
+            pstmnt = connect.prepareStatement(sql);
+
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Please enter info that needs to be Updated : ");
+            System.out.println();
+            Integer age = scan.nextInt();
+            System.out.println("Enter your Id ");
+            Integer id = scan.nextInt();
+            pstmnt.setInt(1, age);
+            pstmnt.setInt(2, id);
+            pstmnt.executeUpdate();
+            int rowsAffected = pstmnt.executeUpdate();
+            // process the result\
+            if (rowsAffected == 0) {
+                System.out.println("unable to update data");
+            } else {
+                System.out.println("data updated successfully");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
