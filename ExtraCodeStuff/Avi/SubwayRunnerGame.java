@@ -350,3 +350,4 @@ public class SubwayRunnerGame extends JPanel implements ActionListener, KeyListe
         game.requestFocusInWindow();
     }
 }
+

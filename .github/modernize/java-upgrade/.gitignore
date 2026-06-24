@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Java
+target/
+*.class
+
+# Eclipse
+.metadata/
+.settings/
+.project
+.classpath
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
