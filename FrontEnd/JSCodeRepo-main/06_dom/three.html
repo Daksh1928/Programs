@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur code</title>
+    <style>
+      body {
+        background-color: black;
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random() * 100 + 1);
+    div.setAttribute("titel", "Generated title by me ");
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+    div.style.width = "100px";
+    // div.innerText = "Devanshu Rana";
+    const addText = document.createTextNode("Devasnhu Dhaliya");
+    div.appendChild(addText);
+    document.body.appendChild(div);
+  </script>
+</html>

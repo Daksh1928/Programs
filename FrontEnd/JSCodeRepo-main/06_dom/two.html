@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM with Chai aur code</title>
+    <style>
+      body {
+        background-color: black;
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <!-- This is my first time learniong DOM -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thusday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    // // HTML collection are approx like array
+
+    // parent.children[0].style.color = "orange";
+    // console.log(parent.firstElementChild);
+
+    const dayOne = document.querySelector(".day");
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+    console.log("NODES: ", parent.childNodes);
+  </script>
+</html>
