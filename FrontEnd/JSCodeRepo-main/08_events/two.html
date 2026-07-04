@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const heyDevanshu = () => {
+      console.log("Devanshu Rana");
+    };
+    const change = function () {
+      document.querySelector("h1").innerHTML = "You are the best master ";
+    };
+    setTimeout(heyDevanshu, 2000);
+    const ref = setTimeout(change, 3000);
+    document.querySelector('#stop').addEventListener('click',(e)=>{
+        clearTimeout(ref);
+        console.log("Stoped")
+
+    })
+  </script>
+</html>
