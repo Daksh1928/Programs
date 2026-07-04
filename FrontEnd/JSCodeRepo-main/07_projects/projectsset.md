@@ -4,7 +4,7 @@
 
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
-# Solution code
+## Solution code started
 
 ## project 1
 
@@ -167,11 +167,8 @@ function newGame() {
     playGame = true;
   });
 }
-##Python
 
-print("Hello world")
 ```
-
 
 ## project 5 solution
 
