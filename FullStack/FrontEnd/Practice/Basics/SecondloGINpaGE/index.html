@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Modern glassmorphism login page with advanced validation and UX features." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Page</title>
+</head>
+<body>
+    <main class="page-shell">
+        <section class="wrapper" aria-labelledby="login-title">
+            <header class="brand">
+                <div class="brand-badge">AI</div>
+                <div>
+                    <p class="eyebrow">Secure access</p>
+                    <h1 id="login-title">Login</h1>
+                </div>
+            </header>
+
+            <p class="subtitle">
+                Sign in with your demo credentials. The UI includes validation, password tools,
+                lockout logic, theme switching, and polished micro-interactions.
+            </p>
+
+            <form id="loginForm" novalidate>
+                <div class="input-box">
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Username"
+                        autocomplete="username"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        required
+                    />
+                    <i class="bx bx-user" aria-hidden="true"></i>
+                </div>
+
+                <div class="input-box">
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        autocomplete="current-password"
+                        required
+                    />
+                    <i class="bx bx-lock-alt" aria-hidden="true"></i>
+                </div>
+
+                <div class="remember-forget">
+                    <label class="remember">
+                        <input type="checkbox" id="rememberMe" />
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="#" aria-label="Forgot your password?">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn">
+                    <span class="btn-text">Login</span>
+                    <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+
+                <div class="register-link">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+C:\Users\devan\OneDrive\Desktop\TeluskoRevison\BeckEnd\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-4224912566.index
-4039584403.index
