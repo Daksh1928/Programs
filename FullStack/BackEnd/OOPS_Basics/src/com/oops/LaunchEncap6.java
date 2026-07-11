@@ -1,6 +1,6 @@
 package com.oops;
 
-class Telusko{
+class Telusko2{
     private String course;
     private Double price;
     public String getCourse() {
@@ -20,10 +20,10 @@ class Telusko{
 
 public class LaunchEncap6 {
 public static void main(String[] args) {
-    Telusko t1 = new Telusko();
+    Telusko2 t1 = new Telusko2();
     t1.setCourse("DSA");
     t1.setPrice(100000.3);
-    Telusko t2 = new Telusko();
+    Telusko2 t2 = new Telusko2();
     t2.setCourse("AI devops ");
     t2.setPrice(10000.0);
 }
