@@ -28,6 +28,11 @@ class Demo {
 public class LaunchStatic {
     public static void main(String[] args) {
     Demo d1 = new Demo();
-    
+    Demo.disp();
+    d1.show();  
+    Demo d2 = new Demo();
+    d2.show();
+    Demo.disp();
+    System.out.println("Static variable a = " + Demo.a);    
     }
 }
