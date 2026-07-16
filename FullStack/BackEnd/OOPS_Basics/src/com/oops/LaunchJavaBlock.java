@@ -24,6 +24,7 @@ class Car {
 public class LaunchJavaBlock {
     public static void main(String[] args) {
         // WAP to count number of object created
+        System.out.println("Creating Car objects:");
         Car c1 = new Car("BMW" , 1000000);
         Car c2 = new Car("BENZ" , 2000000);
         Car c3 = new Car("Maruti");
