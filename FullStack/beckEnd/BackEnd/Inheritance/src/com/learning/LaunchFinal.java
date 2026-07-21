@@ -1,12 +1,12 @@
 package com.learning;
 
-class Devanshu {
+class Devanshu1 {
 	public final void skills() {
 		System.out.print("Devanshu Have multiple skills");
 	}
 }
 
-class Daksh extends Devanshu {
+class Daksh extends Devanshu1 {
 
 	// public void skills() {
 	// System.out.println("Daksh also devloped it self");
