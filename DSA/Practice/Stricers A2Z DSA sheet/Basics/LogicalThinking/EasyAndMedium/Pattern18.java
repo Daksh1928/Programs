@@ -8,7 +8,6 @@ public class Pattern18 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of rows: ");
         int rows = sc.nextInt();
-        String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         for (int i = 0; i < rows; i++) {
             for (char ch = (char) ('A' + rows - 1 - i); ch <= (char) ('A' + rows - 1); ch++) {
@@ -16,6 +15,6 @@ public class Pattern18 {
             }
             System.out.println();
         }
-
+        sc.close();
     }
 }

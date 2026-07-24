@@ -1,5 +1,5 @@
 package LogicalThinking.EasyAndMedium;
-import java.util.*;
+import java.util.Scanner;
 
 public class Pattern4 {
     public static void main(String...args){
@@ -12,5 +12,6 @@ public class Pattern4 {
         }
         System.out.println();
      }
+     sc.close();
     }
 }

@@ -1,6 +1,5 @@
 package LogicalThinking.EasyAndMedium;
 
-import java.util.*;
 
 public class Pattern12 {
         // Function to print the pattern
