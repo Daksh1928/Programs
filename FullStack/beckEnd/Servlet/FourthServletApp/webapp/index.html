@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liquid Glass Login</title>
+  <style>
+    /* Animated Gradient Background */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Glassmorphism Panel */
+    .login-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      padding: 40px;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* Form Fields */
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #00f2fe;
+    }
+
+    /* Submit Button */
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    button:disabled {
+      background: rgba(255, 255, 255, 0.2);
+      cursor: not-allowed;
+    }
+
+    /* Status & Error Messages */
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      min-height: 20px;
+    }
+    
+    .error { color: #ff6b6b; }
+    .success { color: #51cf66; }
+    .warning { color: #fcc419; }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal HTML Structure -->
+  <div class="login-card">
+    <h2>Login</h2>
+    <form method = "post" action = "./RegisterServlet" id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="uname" required autocomplete="off" />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="upassword" required />
+      </div>
+      <div class="input-group">
+        <lable for="City">City</lable>
+        <input type="text" id="City" name="ucity" required />
+        </div>
+
+      <button type="submit" id="submitBtn">Sign In</button>
+      <div id="message" class="message"></div>
+    </form>
+  </div>
+
+</body>
+</html>

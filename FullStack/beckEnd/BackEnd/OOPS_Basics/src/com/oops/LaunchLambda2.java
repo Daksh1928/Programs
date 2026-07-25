@@ -30,4 +30,4 @@ public class LaunchLambda2 {
 
 // in lambda when we are returning something we can't write it in one line 
 // Like  FI f = (String name) ->  return name.length(); { NOT ACCPETABLE }
-// Lambda expression is just like arrow function in js 
+// Lambda expression is just like arrow function in js
