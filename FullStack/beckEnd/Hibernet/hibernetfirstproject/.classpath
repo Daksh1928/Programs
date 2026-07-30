@@ -53,5 +53,14 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/devan/.m2/repository/org/hibernate/orm/hibernate-core/7.4.4.Final/hibernate-core-7.4.4.Final.jar" sourcepath="C:/Users/devan/.m2/repository/org/hibernate/orm/hibernate-core/7.4.4.Final/hibernate-core-7.4.4.Final-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.hibernate.orm"/>
+			<attribute name="maven.artifactId" value="hibernate-core"/>
+			<attribute name="maven.version" value="7.4.4.Final"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

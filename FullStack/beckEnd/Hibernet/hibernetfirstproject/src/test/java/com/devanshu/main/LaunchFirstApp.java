@@ -33,7 +33,7 @@ public class LaunchFirstApp {
         student.setScity("Meerut");
 
         //Step 6 Perfome Operation 
-        session.save(student);
+        session.persist(student);
 
         //Step 7 Performing Transaction operations
         transaction.commit();
