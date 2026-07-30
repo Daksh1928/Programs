@@ -1,12 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.eclipse</groupId>
-  <artifactId>hibernetfirstproject</artifactId>
+  <groupId>com.blackbox</groupId>
+  <artifactId>HibernateSelective</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>hibernetfirstproject</name>
-  
+  <name>HibernateSelective</name>
     <properties>
-    <maven.compiler.release>26</maven.compiler.release>
+    <maven.compiler.release>21</maven.compiler.release>
   </properties>
   
    <dependencies>

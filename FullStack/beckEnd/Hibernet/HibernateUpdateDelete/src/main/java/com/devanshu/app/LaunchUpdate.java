@@ -21,11 +21,20 @@ public class LaunchUpdate {
 			session = sessionFactory.openSession();
 			transaction = session.beginTransaction();
 			Student st = new Student();
-			st.setSid(2);
-			st.setsName("Himanshu");
+			st.setSid(4);
+			st.setsName("Eva");
 			st.setScity("Meerut");
-
-			session.persist(st);
+			Student st2 = new Student();
+			st2.setSid(5);
+			st2.setsName("Aadi");
+			st2.setScity("Modinagar");
+			Student st3 = new Student();
+			st3.setSid(6);
+			st3.setsName("Pari");
+			st3.setScity("Modinagar");
+			session.remove(st);
+			session.remove(st2);
+			session.remove(st3);
 			flag = true;
 
 		}

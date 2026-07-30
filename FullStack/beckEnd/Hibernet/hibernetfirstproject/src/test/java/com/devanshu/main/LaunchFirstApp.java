@@ -31,7 +31,7 @@ public class LaunchFirstApp {
         student.setSid(1);
         student.setsName("Devanshu Rana");
         student.setScity("Meerut");
-
+        
         //Step 6 Perfome Operation 
         session.persist(student);
 
