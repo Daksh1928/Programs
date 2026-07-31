@@ -81,7 +81,7 @@ public class LaunchSelective {
 			emp6.seteAge(age3);
 			emp6.setePhone(num3);
 			emp6.setEmail(mail3);
-
+ 
 			session.persist(emp5);
 			session.persist(emp6);
 
