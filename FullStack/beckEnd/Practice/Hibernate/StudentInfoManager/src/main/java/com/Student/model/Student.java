@@ -1,65 +1,83 @@
 package com.Student.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="StudentInfoTable") 
+@Table(name = "StudentInfoTable")
 public class Student {
     @Id
     @Column(name = "SId")
-    private Integer Id;
+    private Integer id;
+
     @Column(name = "SName")
-    private String Name;
+    private String name;
+
     @Column(name = "SCity")
-    private String City;
+    private String city;
+
     @Column(name = "SMarks")
-    private Integer Marks;
+    private Integer marks;
 
     public Student() {
-        System.out.println("Object created ");
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getCity() {
-        return City;
+        return city;
     }
 
     public void setCity(String city) {
-        City = city;
+        this.city = city;
     }
 
     public Integer getMarks() {
-        return Marks;
+        return marks;
     }
 
     public void setMarks(Integer marks) {
-        Marks = marks;
+        this.marks = marks;
+    }
+
+    public String getGrade() {
+        if (marks == null) {
+            return "N/A";
+        }
+        if (marks >= 90)
+            return "A+";
+        if (marks >= 80)
+            return "A";
+        if (marks >= 70)
+            return "B+";
+        if (marks >= 60)
+            return "B";
+        if (marks >= 50)
+            return "C";
+        if (marks >= 40)
+            return "D";
+        return "F-";
     }
 
     @Override
     public String toString() {
-        return "Student [Id=" + Id + ", Name=" + Name + ", City=" + City + ", Marks=" + Marks + ", getId()=" + getId()
-                + ", getName()=" + getName() + ", getCity()=" + getCity() + ", getMarks()=" + getMarks()
-                + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-                + "]";
+        return String.format("Student{id=%d, name='%s', city='%s', marks=%d, grade='%s'}",
+                id, name, city, marks, getGrade());
     }
-
 }

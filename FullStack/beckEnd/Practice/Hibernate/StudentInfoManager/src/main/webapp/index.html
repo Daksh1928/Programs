@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Info Manager</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f7fb;
+        color: #223;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+      }
+      h1,
+      h2 {
+        margin-top: 0;
+      }
+      form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        gap: 6px;
+      }
+      input,
+      select,
+      button {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        font-size: 14px;
+      }
+      button {
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
+      button.secondary {
+        background: #64748b;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border-bottom: 1px solid #e2e8f0;
+        padding: 10px;
+        text-align: left;
+      }
+      .row-actions button {
+        margin-right: 8px;
+        padding: 6px 10px;
+      }
+      .message {
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+      }
+      .success {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .error {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Student Info Manager</h1>
+        <p>
+          Manage students, view grades, update records, and remove them with a
+          clean web UI.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Add Student</h2>
+        <form id="addForm" action="add" method="post">
+          <label>ID<input name="id" type="number" required /></label>
+          <label>Name<input name="name" required /></label>
+          <label>City<input name="city" required /></label>
+          <label
+            >Marks<input name="marks" type="number" min="0" max="100" required
+          /></label>
+          <label style="grid-column: 1 / -1"
+            ><button type="submit">Add Student</button></label
+          >
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Update Student</h2>
+        <form id="updateForm" action="update" method="post">
+          <label>ID<input name="id" type="number" required /></label>
+          <label>Name<input name="name" /></label>
+          <label>City<input name="city" /></label>
+          <label
+            >Marks<input name="marks" type="number" min="0" max="100"
+          /></label>
+          <label style="grid-column: 1 / -1"
+            ><button type="submit">Update Student</button></label
+          >
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Students</h2>
+        <div id="messageBox"></div>
+        <div class="grid">
+          <form id="filterForm" action="list" method="get">
+            <label
+              >Filter by grade<select name="grade">
+                <option value="">All</option>
+                <option>A+</option>
+                <option>A</option>
+                <option>B+</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>F-</option>
+              </select></label
+            >
+            <label style="justify-content: end"
+              ><button type="submit">Filter</button></label
+            >
+          </form>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Marks</th>
+                <th>Grade</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const basePath = "/StudentInfoManager";
+
+      async function loadStudents(grade = "") {
+        const response = await fetch(
+          basePath + "/list?grade=" + encodeURIComponent(grade),
+        );
+        const html = await response.text();
+        document.getElementById("studentTableBody").innerHTML = html;
+      }
+
+      async function deleteStudent(id) {
+        const response = await fetch(basePath + "/delete?id=" + id, {
+          method: "GET",
+        });
+        const text = await response.text();
+        const box = document.getElementById("messageBox");
+        box.className = "message success";
+        box.textContent = text;
+        loadStudents("");
+      }
+
+      document
+        .getElementById("addForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const formData = new URLSearchParams(new FormData(this));
+          const response = await fetch(this.getAttribute("action"), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: formData,
+          });
+          const text = await response.text();
+          document.getElementById("messageBox").className = "message success";
+          document.getElementById("messageBox").textContent = text;
+          this.reset();
+          loadStudents("");
+        });
+
+      document
+        .getElementById("updateForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const formData = new URLSearchParams(new FormData(this));
+          const response = await fetch(this.getAttribute("action"), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: formData,
+          });
+          const text = await response.text();
+          document.getElementById("messageBox").className = "message success";
+          document.getElementById("messageBox").textContent = text;
+          this.reset();
+          loadStudents("");
+        });
+
+      document
+        .getElementById("filterForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const grade = this.elements.grade.value;
+          loadStudents(grade);
+        });
+
+      loadStudents("");
+    </script>
+  </body>
+</html>
