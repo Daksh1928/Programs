@@ -1,70 +1,91 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "GetRecordApp",
-            "request": "launch",
-            "mainClass": "com.Dataretrivel.app.GetRecordApp",
-            "projectName": "HibernateDataRetrival"
-        },
-        {
-            "type": "java",
-            "name": "LaunchStandardApp",
-            "request": "launch",
-            "mainClass": "com.devasnhu.app.LaunchStandardApp",
-            "projectName": "HibernateOneToOne"
-        },
-        {
-            "type": "java",
-            "name": "LaunchSelective",
-            "request": "launch",
-            "mainClass": "com.blackbox.app.LaunchSelective",
-            "projectName": "HibernateSelective"
-        },
-        {
-            "type": "java",
-            "name": "Employee1",
-            "request": "launch",
-            "mainClass": "com.blackbox.model.Employee1",
-            "projectName": "HibernateSelective"
-        },
-        {
-            "type": "java",
-            "name": "LaunchUpdate",
-            "request": "launch",
-            "mainClass": "com.devanshu.app.LaunchUpdate",
-            "projectName": "HibernateUpdateDelete"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "com.visualcode.Main",
-            "projectName": "firsthibernetpro"
-        },
-        {
-            "type": "java",
-            "name": "LaunchFirstApp",
-            "request": "launch",
-            "mainClass": "com.devanshu.main.LaunchFirstApp",
-            "projectName": "hibernetfirstproject"
-        },
-        {
-            "type": "java",
-            "name": "LaunchStandardApp(1)",
-            "request": "launch",
-            "mainClass": "com.devanshu.main.LaunchStandardApp",
-            "projectName": "hibernetfirstproject"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "LaunchUpdate",
+      "request": "launch",
+      "mainClass": "com.devanshu.app.LaunchUpdate",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "GetRecordApp",
+      "request": "launch",
+      "mainClass": "com.devasnhu.app.GetRecordApp",
+      "projectName": "HibernateDataRetrivalHQL"
+    },
+    {
+      "type": "java",
+      "name": "LaunchStandardApp",
+      "request": "launch",
+      "mainClass": "com.devanshu.app.LaunchStandardApp",
+      "projectName": "HibernateLOBs"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "GetRecordApp",
+      "request": "launch",
+      "mainClass": "com.Dataretrivel.app.GetRecordApp",
+      "projectName": "HibernateDataRetrival"
+    },
+    {
+      "type": "java",
+      "name": "LaunchStandardApp",
+      "request": "launch",
+      "mainClass": "com.devasnhu.app.LaunchStandardApp",
+      "projectName": "HibernateOneToOne"
+    },
+    {
+      "type": "java",
+      "name": "LaunchSelective",
+      "request": "launch",
+      "mainClass": "com.blackbox.app.LaunchSelective",
+      "projectName": "HibernateSelective"
+    },
+    {
+      "type": "java",
+      "name": "Employee1",
+      "request": "launch",
+      "mainClass": "com.blackbox.model.Employee1",
+      "projectName": "HibernateSelective"
+    },
+    {
+      "type": "java",
+      "name": "LaunchUpdate",
+      "request": "launch",
+      "mainClass": "com.devanshu.app.LaunchUpdate",
+      "projectName": "HibernateUpdateDelete"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "com.visualcode.Main",
+      "projectName": "firsthibernetpro"
+    },
+    {
+      "type": "java",
+      "name": "LaunchFirstApp",
+      "request": "launch",
+      "mainClass": "com.devanshu.main.LaunchFirstApp",
+      "projectName": "hibernetfirstproject"
+    },
+    {
+      "type": "java",
+      "name": "LaunchStandardApp(1)",
+      "request": "launch",
+      "mainClass": "com.devanshu.main.LaunchStandardApp",
+      "projectName": "hibernetfirstproject"
+    }
+  ]
 }

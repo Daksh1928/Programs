@@ -2,6 +2,7 @@ package com.devanshu.model;
 
 import java.util.Arrays;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,8 +19,10 @@ public class StudentInfo {
    private String sName;
    private String sCity;
    @Lob
+   @Column(length = 100000)
    private byte[] image;
    @Lob
+   @Column(length = 100000)
    private char[] textFile;
 
    public byte[] getImage() {
